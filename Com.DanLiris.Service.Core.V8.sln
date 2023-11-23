@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34309.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Com.DanLiris.Service.Core.WebApi", "Com.DanLiris.Service.Core.WebApi\Com.DanLiris.Service.Core.WebApi.csproj", "{44AA8064-C3FF-41C4-99D3-FD212160C9A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Com.DanLiris.Service.Core.Lib", "Com.DanLiris.Service.Core.Lib\Com.DanLiris.Service.Core.Lib.csproj", "{AF8216B1-490D-4639-8E76-8471D02389DB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{44AA8064-C3FF-41C4-99D3-FD212160C9A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44AA8064-C3FF-41C4-99D3-FD212160C9A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44AA8064-C3FF-41C4-99D3-FD212160C9A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44AA8064-C3FF-41C4-99D3-FD212160C9A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF8216B1-490D-4639-8E76-8471D02389DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF8216B1-490D-4639-8E76-8471D02389DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF8216B1-490D-4639-8E76-8471D02389DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF8216B1-490D-4639-8E76-8471D02389DB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2034025F-DDD2-4058-9833-453710B367B6}
+	EndGlobalSection
+EndGlobal
