@@ -10,16 +10,16 @@ namespace Com.DanLiris.Service.Core.Lib.Models
     public class IncomeTax : StandardEntity, IValidatableObject
     {
         [MaxLength(255)]
-        public string UId { get; set; }
+         public string? UId { get; set; }
 
         [StringLength(500)]
-        public string Name { get; set; }
+         public string? Name { get; set; }
 
         public double? Rate { get; set; }
         
-        public string Description { get; set; }        
+         public string? Description { get; set; }        
 
-        public string COACodeCredit { get; set; }
+         public string? COACodeCredit { get; set; }
 
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         {

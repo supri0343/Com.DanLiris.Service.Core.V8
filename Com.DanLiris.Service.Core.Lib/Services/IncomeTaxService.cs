@@ -57,7 +57,8 @@ namespace Com.DanLiris.Service.Core.Lib.Services
                     Name = v.Name,
                     Rate = v.Rate,
                     Description = v.Description,
-                    COACodeCredit = v.COACodeCredit
+                    COACodeCredit = v.COACodeCredit,
+                    _LastModifiedUtc = v._LastModifiedUtc
                 });
 
             /* Order */

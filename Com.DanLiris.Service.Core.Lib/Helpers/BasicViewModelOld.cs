@@ -7,7 +7,7 @@ namespace Com.DanLiris.Service.Core.Lib.Helpers
     public class BasicViewModelOld
     {
         public int _id { get; set; }
-        public string UId { get; set; }
+         public string? UId { get; set; }
 
         public bool _deleted { get; set; }
 
@@ -15,14 +15,14 @@ namespace Com.DanLiris.Service.Core.Lib.Helpers
 
         public DateTime _createdDate { get; set; }
 
-        public string _createdBy { get; set; }
+         public string? _createdBy { get; set; }
 
-        public string _createAgent { get; set; }
+         public string? _createAgent { get; set; }
 
         public DateTime _updatedDate { get; set; }
 
-        public string _updatedBy { get; set; }
+         public string? _updatedBy { get; set; }
 
-        public string _updateAgent { get; set; }
+         public string? _updateAgent { get; set; }
     }
 }

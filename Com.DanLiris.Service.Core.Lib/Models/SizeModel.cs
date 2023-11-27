@@ -13,8 +13,8 @@ namespace Com.DanLiris.Service.Core.Lib.Models
     public class SizeModel : StandardEntity, IValidatableObject
     {
         [MaxLength(255)]
-        public string UId { get; set; }
-        public string Size { get; set; }
+         public string? UId { get; set; }
+         public string? Size { get; set; }
         public int SizeIdx { get; set; }
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         {

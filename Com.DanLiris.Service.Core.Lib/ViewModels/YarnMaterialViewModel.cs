@@ -8,9 +8,9 @@ namespace Com.DanLiris.Service.Core.Lib.ViewModels
 {
     public class YarnMaterialViewModel : BasicViewModel
     {
-        public string Code { get; set; }
-        public string Name { get; set; }
-        public string Remark { get; set; }         
+         public string? Code { get; set; }
+         public string? Name { get; set; }
+         public string? Remark { get; set; }         
 
     }
 }

@@ -9,9 +9,9 @@ namespace Com.DanLiris.Service.Core.Lib.Models
     public class GarmentLeftoverWarehouseComodityModel : StandardEntity
     {
         [MaxLength(50)]
-        public string Code { get; set; }
+         public string? Code { get; set; }
 
         [MaxLength(100)]
-        public string Name { get; set; }
+         public string? Name { get; set; }
     }
 }

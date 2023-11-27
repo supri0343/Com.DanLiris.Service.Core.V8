@@ -64,7 +64,8 @@ namespace Com.DanLiris.Service.Core.Lib.Services
                 {
                     Id = b.Id,
                     Code = b.Code,
-                    Name = b.Name
+                    Name = b.Name,
+                    _LastModifiedUtc = b._LastModifiedUtc
                 });
 
             /* Order */

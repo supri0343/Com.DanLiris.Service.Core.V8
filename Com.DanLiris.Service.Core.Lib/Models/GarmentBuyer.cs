@@ -10,33 +10,33 @@ namespace Com.DanLiris.Service.Core.Lib.Models
     public class GarmentBuyer : StandardEntity, IValidatableObject
     {
         [MaxLength(255)]
-        public string UId { get; set; }
+         public string? UId { get; set; }
 
         [StringLength(100)]
-        public string Code { get; set; }
+         public string? Code { get; set; }
 
         [StringLength(500)]
-        public string Name { get; set; }
+         public string? Name { get; set; }
 
         [StringLength(3000)]
-        public string Address { get; set; }
+         public string? Address { get; set; }
 
         [StringLength(500)]
-        public string City { get; set; }
+         public string? City { get; set; }
 
         [StringLength(500)]
-        public string Country { get; set; }
+         public string? Country { get; set; }
 
         [StringLength(500)]
-        public string Contact { get; set; }
+         public string? Contact { get; set; }
 
         public int? Tempo { get; set; }
 
         [StringLength(500)]
-        public string Type { get; set; }
+         public string? Type { get; set; }
 
         [StringLength(100)]
-        public string NPWP { get; set; }
+         public string? NPWP { get; set; }
 
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         {

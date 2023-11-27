@@ -9,13 +9,13 @@ namespace Com.DanLiris.Service.Core.Lib.Models
     public class BankCashReceiptTypeModel : StandardEntity
     {
         [StringLength(100)]
-        public string Name { get; set; }
+         public string? Name { get; set; }
 
         [StringLength(50)]
-        public string COACode { get; set; }
+         public string? COACode { get; set; }
         public int COAId { get; set; }
         [StringLength(50)]
-        public string COAName { get; set; }
+         public string? COAName { get; set; }
 
     }
 }

@@ -13,6 +13,6 @@ namespace Com.DanLiris.Service.Core.Lib.Services.IBCurrency
         }
 
         public int Id { get; private set; }
-        public string Code { get; private set; }
+         public string? Code { get; private set; }
     }
 }

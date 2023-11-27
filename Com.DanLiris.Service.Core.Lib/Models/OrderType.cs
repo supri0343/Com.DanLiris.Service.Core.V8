@@ -10,17 +10,17 @@ namespace Com.DanLiris.Service.Core.Lib.Models
     public class OrderType : StandardEntity, IValidatableObject
     {
         [MaxLength(255)]
-        public string UId { get; set; }
+         public string? UId { get; set; }
         [MaxLength(25)]
-        public string Code { get; set; }
+         public string? Code { get; set; }
         [MaxLength(255)]
-        public string Name { get; set; }
+         public string? Name { get; set; }
 
         [MaxLength(255)]
-        public string Unit { get; set; }
+         public string? Unit { get; set; }
 
         [MaxLength(1000)]
-        public string Remark { get; set; }
+         public string? Remark { get; set; }
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         {
             ComodityService service = validationContext.GetService<ComodityService>();

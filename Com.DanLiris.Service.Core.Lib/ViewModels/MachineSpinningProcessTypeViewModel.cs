@@ -8,7 +8,7 @@ namespace Com.DanLiris.Service.Core.Lib.ViewModels
 {
     public class MachineSpinningProcessTypeViewModel : BasicViewModel, IValidatableObject
     {
-        public string Type { get; set; }
+         public string? Type { get; set; }
 
         public int MachineSpinningId { get; set; }
 

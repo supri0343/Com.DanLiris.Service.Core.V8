@@ -10,27 +10,27 @@ namespace Com.DanLiris.Service.Core.Lib.Models
     public class Category : StandardEntity, IValidatableObject
     {
         [MaxLength(255)]
-        public string UId { get; set; }
+         public string? UId { get; set; }
 
         [StringLength(100)]
-        public string Code { get; set; }
+         public string? Code { get; set; }
 
         [StringLength(500)]
-        public string Name { get; set; }
+         public string? Name { get; set; }
 
         [StringLength(500)]
-        public string CodeRequirement { get; set; }
+         public string? CodeRequirement { get; set; }
 
         public int DivisionId { get; set; }
 
         [MaxLength(50)]
-        public string PurchasingCOA { get; set; }
+         public string? PurchasingCOA { get; set; }
         [MaxLength(50)]
-        public string StockCOA { get; set; }
+         public string? StockCOA { get; set; }
         [MaxLength(50)]
-        public string LocalDebtCOA { get; set; }
+         public string? LocalDebtCOA { get; set; }
         [MaxLength(50)]
-        public string ImportDebtCOA { get; set; }
+         public string? ImportDebtCOA { get; set; }
 
         public int AccountingCategoryId { get; set; }
         public int BudgetingCategoryId { get; set; }

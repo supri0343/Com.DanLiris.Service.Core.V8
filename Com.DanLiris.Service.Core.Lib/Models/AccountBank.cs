@@ -12,42 +12,42 @@ namespace Com.DanLiris.Service.Core.Lib.Models
     public class AccountBank : StandardEntity, IValidatableObject
     {
         [MaxLength(128)]
-        public string? UId { get; set; }
+         public string? UId { get; set; }
         [StringLength(64)]
-        public string? Code { get; set; }
+         public string? Code { get; set; }
         [StringLength(64)]
-        public string? BankCode { get; set; }
+         public string? BankCode { get; set; }
         [StringLength(512)]
-        public string BankName { get; set; }
+         public string? BankName { get; set; }
         [StringLength(512)]
-        public string? BankAddress { get; set; }
+         public string? BankAddress { get; set; }
         [StringLength(512)]
-        public string? AccountName { get; set; }
+         public string? AccountName { get; set; }
         [StringLength(64)]
-        public string? AccountCOA { get; set; }
+         public string? AccountCOA { get; set; }
         [StringLength(128)]
-        public string AccountNumber { get; set; }
+         public string? AccountNumber { get; set; }
         [StringLength(256)]
-        public string? SwiftCode { get; set; }
+         public string? SwiftCode { get; set; }
         public int? CurrencyId { get; set; }
         [StringLength(32)]
-        public string? CurrencyCode { get; set; }
+         public string? CurrencyCode { get; set; }
         [StringLength(8)]
-        public string? CurrencySymbol { get; set; }
+         public string? CurrencySymbol { get; set; }
         /* Double */
         public double CurrencyRate { get; set; }
         [StringLength(1024)]
-        public string? CurrencyDescription { get; set; }
+         public string? CurrencyDescription { get; set; }
         [StringLength(64)]
         //Division
-        public string? DivisionName { get; set; }
+         public string? DivisionName { get; set; }
         [StringLength(32)]
-        public string? DivisionCode { get; set; }
+         public string? DivisionCode { get; set; }
         public int? DivisionId { get; set; }
         [StringLength(128)]
-        public string? Phone { get; set; }
+         public string? Phone { get; set; }
         [StringLength(128)]
-        public string? Fax { get; set; }
+         public string? Fax { get; set; }
 
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         {

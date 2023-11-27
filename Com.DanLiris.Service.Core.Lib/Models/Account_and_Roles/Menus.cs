@@ -12,17 +12,17 @@ namespace Com.DanLiris.Service.Core.Lib.Models.Account_and_Roles
     public class Menus : StandardEntity, IValidatableObject
     {
         [MaxLength(255)]
-        public string UId { get; set; }
+         public string? UId { get; set; }
 
         [StringLength(100)]
-        public string Code { get; set; }
+         public string? Code { get; set; }
         [StringLength(500)]
-        public string Menu { get; set; }
+         public string? Menu { get; set; }
         [StringLength(500)]
-        public string SubMenu { get; set; }
+         public string? SubMenu { get; set; }
         [StringLength(500)]
-        public string MenuName { get; set; }
-        public string Description { get; set; }
+         public string? MenuName { get; set; }
+         public string? Description { get; set; }
 
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         {

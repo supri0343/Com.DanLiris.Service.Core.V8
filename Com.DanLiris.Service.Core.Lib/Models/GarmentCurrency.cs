@@ -11,10 +11,10 @@ namespace Com.DanLiris.Service.Core.Lib.Models
     public class GarmentCurrency : StandardEntity, IValidatableObject
     {
         [MaxLength(255)]
-        public string UId { get; set; }
+         public string? UId { get; set; }
 
         [StringLength(100)]
-        public string Code { get; set; }
+         public string? Code { get; set; }
 
 		public DateTime Date { get; set; }
 

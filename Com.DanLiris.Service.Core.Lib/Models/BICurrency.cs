@@ -9,9 +9,9 @@ namespace Com.DanLiris.Service.Core.Lib.Models
     public class BICurrency : StandardEntity, IValidatableObject
     {
         [StringLength(32)]
-        public string Code { get; set; }
+         public string? Code { get; set; }
         [StringLength(128)]
-        public string Name { get; set; }
+         public string? Name { get; set; }
 
         public DateTime Date { get; set; }
 

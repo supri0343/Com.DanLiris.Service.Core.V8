@@ -8,14 +8,14 @@ namespace Com.DanLiris.Service.Core.Lib.ViewModels
 {
     public class GarmentTransactionTypeViewModel : BasicViewModel, IValidatableObject
     {
-        public string Code { get; set; }
+         public string? Code { get; set; }
 
-        public string Name { get; set; }
+         public string? Name { get; set; }
         public int? COAId { get; set; }
 
-        public string COACode { get; set; }
+         public string? COACode { get; set; }
 
-        public string COAName { get; set; }
+         public string? COAName { get; set; }
 
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         {

@@ -12,20 +12,20 @@ namespace Com.DanLiris.Service.Core.Lib.Models
     public class Division : StandardEntity, IValidatableObject
     {
         [MaxLength(255)]
-        public string UId { get; set; }
+         public string? UId { get; set; }
 
         [StringLength(100)]
-        public string Code { get; set; }
+         public string? Code { get; set; }
 
         [StringLength(500)]
-        public string Name { get; set; }
+         public string? Name { get; set; }
 
         [StringLength(500)]
-        public string GroupName { get; set; }
+         public string? GroupName { get; set; }
 
-        public string Description { get; set; }        
+         public string? Description { get; set; }        
         [MaxLength(50)]
-        public string COACode { get; set; }
+         public string? COACode { get; set; }
         public int BudgetCashflowLayoutOrder { get; set; }
 
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)

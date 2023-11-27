@@ -9,13 +9,13 @@ namespace Com.DanLiris.Service.Core.Lib.Models
     public class StandardMinuteValue : StandardEntity, IValidatableObject
     {
         [MaxLength(255)]
-        public string UId { get; set; }
+         public string? UId { get; set; }
         public int BuyerId { get; set; }
-        public string BuyerCode { get; set; }
-        public string BuyerName { get; set; }
+         public string? BuyerCode { get; set; }
+         public string? BuyerName { get; set; }
         public int ComodityId { get; set; }
-        public string ComodityCode { get; set; }
-        public string ComodityName { get; set; }
+         public string? ComodityCode { get; set; }
+         public string? ComodityName { get; set; }
         public DateTimeOffset SMVDate { get; set; }
         public decimal SMVCutting { get; set; }
         public decimal SMVSewing { get; set; }

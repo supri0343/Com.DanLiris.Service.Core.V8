@@ -12,17 +12,17 @@ namespace Com.DanLiris.Service.Core.Lib.Models
     public class Currency : StandardEntity, IValidatableObject
     {
         [MaxLength(255)]
-        public string? UId { get; set; }
+         public string? UId { get; set; }
 
         [StringLength(100)]
-        public string Code { get; set; }
+         public string? Code { get; set; }
 
         [StringLength(50)]
-        public string? Symbol { get; set; }
+         public string? Symbol { get; set; }
 
         public double? Rate { get; set; }
 
-        public string Description { get; set; }
+         public string? Description { get; set; }
 
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         {

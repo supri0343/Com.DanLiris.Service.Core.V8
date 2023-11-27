@@ -4,6 +4,6 @@ namespace Com.DanLiris.Service.Core.Lib.ViewModels
 {
     public class UomViewModel : BasicViewModel
     {
-        public string Unit { get; set; }
+         public string? Unit { get; set; }
     }
 }

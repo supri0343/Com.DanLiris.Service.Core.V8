@@ -9,33 +9,33 @@ namespace Com.DanLiris.Service.Core.Lib.Models
     public class Product : StandardEntity, IValidatableObject
     {
         [MaxLength(255)]
-        public string UId { get; set; }
+         public string? UId { get; set; }
 
         [StringLength(100)]
-        public string Code { get; set; }
+         public string? Code { get; set; }
 
         [StringLength(255)]
-        public string Name { get; set; }
+         public string? Name { get; set; }
 
         public decimal Price { get; set; }
 
         public int? CurrencyId { get; set; }
 
         [StringLength(255)]
-        public string CurrencyCode { get; set; }
+         public string? CurrencyCode { get; set; }
         [StringLength(255)]
-        public string CurrencySymbol { get; set; }
+         public string? CurrencySymbol { get; set; }
 
         [StringLength(1000)]
-        public string Description { get; set; }
+         public string? Description { get; set; }
 
         public int? UomId { get; set; }
 
         [StringLength(500)]
-        public string UomUnit { get; set; }
+         public string? UomUnit { get; set; }
 
         [StringLength(500)]
-        public string Tags { get; set; }
+         public string? Tags { get; set; }
 
         public ProductSPPProperty SPPProperties { get; set; }
 

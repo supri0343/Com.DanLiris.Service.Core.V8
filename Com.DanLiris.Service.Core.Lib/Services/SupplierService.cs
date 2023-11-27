@@ -57,7 +57,8 @@ namespace Com.DanLiris.Service.Core.Lib.Services
                     Name = s.Name,
                     Address = s.Address,
                     Import = s.Import,
-                    NPWP = s.NPWP
+                    NPWP = s.NPWP,
+                    _LastModifiedUtc = s._LastModifiedUtc
                 });
 
             /* Order */

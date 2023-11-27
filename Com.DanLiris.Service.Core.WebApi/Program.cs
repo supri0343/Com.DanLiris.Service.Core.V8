@@ -15,10 +15,10 @@ namespace Com.DanLiris.Service.Core.WebApi
 
             // Add services to the container.
 
-      
 
 
-            //builder.Services.AddControllers()
+
+            builder.Services.AddControllers();
             //   .AddJsonOptions(opt =>
             //   {
             //       opt.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;

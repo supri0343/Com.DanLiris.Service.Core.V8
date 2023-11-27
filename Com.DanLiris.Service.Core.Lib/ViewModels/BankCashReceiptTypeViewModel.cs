@@ -9,10 +9,10 @@ namespace Com.DanLiris.Service.Core.Lib.ViewModels
 {
     public class BankCashReceiptTypeViewModel : BasicViewModel, IValidatableObject
     {
-        public string Name { get; set; }
+         public string? Name { get; set; }
         public int COAId { get; set; }
-        public string COACode { get; set; }
-        public string COAName { get; set; }
+         public string? COACode { get; set; }
+         public string? COAName { get; set; }
 
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         {

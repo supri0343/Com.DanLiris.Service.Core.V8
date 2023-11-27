@@ -6,11 +6,11 @@ namespace Com.DanLiris.Service.Core.Lib.Services.IBCurrency
 {
     public class CSVFormDto
     {
-        public string Code { get; set; }
-        public string Year { get; set; }
-        public string Month { get; set; }
-        public string Rate { get; set; }
-        public string ErrorMessage { get; set; }
+         public string? Code { get; set; }
+         public string? Year { get; set; }
+         public string? Month { get; set; }
+         public string? Rate { get; set; }
+         public string? ErrorMessage { get; set; }
 
         public int GetYear()
         {

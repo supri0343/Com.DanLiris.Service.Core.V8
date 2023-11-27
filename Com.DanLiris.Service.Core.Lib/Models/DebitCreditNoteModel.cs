@@ -10,8 +10,8 @@ namespace Com.DanLiris.Service.Core.Lib.Models
 {
     public class DebitCreditNoteModel : StandardEntity, IValidatableObject
     {
-        public string TypeDCN { get; set; }
-        public string ItemTypeDCN { get; set; }
+         public string? TypeDCN { get; set; }
+         public string? ItemTypeDCN { get; set; }
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         {
             List<ValidationResult> validationResult = new List<ValidationResult>();

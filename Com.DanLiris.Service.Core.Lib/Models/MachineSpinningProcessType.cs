@@ -8,7 +8,7 @@ namespace Com.DanLiris.Service.Core.Lib.Models
 {
     public class MachineSpinningProcessType : StandardEntity
     {
-        public string Type { get; set; }
+         public string? Type { get; set; }
 
         public virtual int MachineSpinningId { get; set; }
 

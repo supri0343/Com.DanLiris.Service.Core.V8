@@ -11,17 +11,17 @@ namespace Com.DanLiris.Service.Core.Lib.Models
     public class GarmentBuyerBrand : StandardEntity, IValidatableObject
     {
         [MaxLength(255)]
-        public string UId { get; set; }
+         public string? UId { get; set; }
 
         [StringLength(100)]
-        public string Code { get; set; }
+         public string? Code { get; set; }
 
         [StringLength(500)]
-        public string Name { get; set; }
+         public string? Name { get; set; }
 
         public int BuyerId { get; set; }
-        public string BuyerCode { get; set; }
-        public string BuyerName { get; set; }
+         public string? BuyerCode { get; set; }
+         public string? BuyerName { get; set; }
 
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         {

@@ -10,8 +10,8 @@
 //{
 //    public class Account : StandardEntity, IValidatableObject
 //    {
-//        public string Username { get; set; }
-//        public string Password { get; set; }
+//         public string? Username { get; set; }
+//         public string? Password { get; set; }
 //        public bool IsLocked { get; set; }
 //        public virtual AccountProfile AccountProfile { get; set; }
 //        public virtual ICollection<AccountRole> AccountRoles { get; set; }

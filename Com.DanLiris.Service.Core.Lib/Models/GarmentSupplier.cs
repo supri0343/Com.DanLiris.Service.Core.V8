@@ -10,36 +10,36 @@ namespace Com.DanLiris.Service.Core.Lib.Models
     public class GarmentSupplier : StandardEntity, IValidatableObject
 	{
 		[MaxLength(255)]
-		public string UId { get; set; }
+		 public string? UId { get; set; }
 
 		[StringLength(100)]
-		public string Code { get; set; }
+		 public string? Code { get; set; }
 
 		[StringLength(500)]
-		public string Name { get; set; }
+		 public string? Name { get; set; }
 
 		[StringLength(3000)]
-		public string Address { get; set; }
+		 public string? Address { get; set; }
 
 		[StringLength(500)]
-		public string Contact { get; set; }
+		 public string? Contact { get; set; }
 
 		[StringLength(500)]
-		public string PIC { get; set; }
+		 public string? PIC { get; set; }
 
 		public bool? Import { get; set; }
 		public bool? UseVat { get; set; }
 		[StringLength(100)]
-		public string NPWP { get; set; }
+		 public string? NPWP { get; set; }
 
 		[StringLength(500)]
-		public string SerialNumber { get; set; }
+		 public string? SerialNumber { get; set; }
 
 		public bool? UseTax { get; set; }
 
 		/* IncomeTaxes*/
 		public int IncomeTaxesId { get; set; }
-		public string IncomeTaxesName { get; set; }
+		 public string? IncomeTaxesName { get; set; }
 		public double? IncomeTaxesRate { get; set; }
 
 		public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)

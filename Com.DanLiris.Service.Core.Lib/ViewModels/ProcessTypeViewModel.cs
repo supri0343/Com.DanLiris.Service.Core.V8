@@ -7,11 +7,11 @@ namespace Com.DanLiris.Service.Core.Lib.ViewModels
 {
     public class ProcessTypeViewModel : BasicViewModel
     {
-        public string Code { get; set; }
-        public string Name { get; set; }
-        public string Remark { get; set; }
-        public string Unit { get; set; }
-        public string SPPCode { get; set; }
+         public string? Code { get; set; }
+         public string? Name { get; set; }
+         public string? Remark { get; set; }
+         public string? Unit { get; set; }
+         public string? SPPCode { get; set; }
 
         /*order type*/
         public virtual OrderTypeViewModel OrderType { get; set; }

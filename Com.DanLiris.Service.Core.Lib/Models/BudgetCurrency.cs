@@ -11,16 +11,16 @@ namespace Com.DanLiris.Service.Core.Lib.Models
     public class BudgetCurrency : StandardEntity, IValidatableObject
     {
 		[MaxLength(255)]
-		public string UId { get; set; }
+		 public string? UId { get; set; }
 
 		[StringLength(100)]
-		public string Code { get; set; }
+		 public string? Code { get; set; }
 
 		public DateTime Date { get; set; }
 
 		public double? Rate { get; set; }
 
-		public string Remark { get; set; }
+		 public string? Remark { get; set; }
 
 		public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
 		{

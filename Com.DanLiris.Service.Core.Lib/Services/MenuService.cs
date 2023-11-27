@@ -30,7 +30,7 @@ namespace Com.DanLiris.Service.Core.Lib.Services
         }
         public override Tuple<List<Menus>, int, Dictionary<string, string>, List<string>> ReadModel(int Page = 1, int Size = 25, string Order = "{}", List<string> Select = null, string Keyword = null, string Filter = "{}")
         {
-            IQueryable<Menus> Query = this.DbContext.Menus;
+            IQueryable<Menus> Query = this.DbContext.Menus.Where(x => x._IsDeleted==false);
             Dictionary<string, object> FilterDictionary = JsonConvert.DeserializeObject<Dictionary<string, object>>(Filter);
             Query = ConfigureFilter(Query, FilterDictionary);
             Dictionary<string, string> OrderDictionary = JsonConvert.DeserializeObject<Dictionary<string, string>>(Order);
@@ -52,6 +52,7 @@ namespace Com.DanLiris.Service.Core.Lib.Services
                 "Id", "Code",  "Menu", "SubMenu","MenuName"
             };
 
+            var result = new List<Menus>();
             Query = Query
                 .Select(u => new Menus
                 {
@@ -60,6 +61,7 @@ namespace Com.DanLiris.Service.Core.Lib.Services
                     Menu = u.Menu,
                     SubMenu = u.SubMenu,
                     MenuName = u.MenuName,
+                    _LastModifiedUtc = u._LastModifiedUtc
                 });
 
             /* Order */
@@ -69,7 +71,7 @@ namespace Com.DanLiris.Service.Core.Lib.Services
 
                 //Query = Query.OrderByDescending(b => b._LastModifiedUtc); /* Default Order */
 
-                Query = Query.OrderBy(x => PadNumbers(x.Code));
+                result = Query.ToList().OrderBy(x => PadNumbers(x.Code)).ToList();
 
                 //Query = Query.OrderBy(str => Regex.Split(str.Code.Replace(" "," "),("([0-9]+)").Select(Convert)));
 
@@ -91,15 +93,15 @@ namespace Com.DanLiris.Service.Core.Lib.Services
 
                 BindingFlags IgnoreCase = BindingFlags.IgnoreCase | BindingFlags.Public | BindingFlags.Instance;
 
-                Query = OrderType.Equals(General.ASCENDING) ?
-                    Query.OrderBy(b => b.GetType().GetProperty(TransformKey, IgnoreCase).GetValue(b)) :
-                    Query.OrderByDescending(b => b.GetType().GetProperty(TransformKey, IgnoreCase).GetValue(b));
+                result = OrderType.Equals(General.ASCENDING) ?
+                    Query.OrderBy(b => b.GetType().GetProperty(TransformKey, IgnoreCase).GetValue(b)).ToList() :
+                    Query.OrderByDescending(b => b.GetType().GetProperty(TransformKey, IgnoreCase).GetValue(b)).ToList();
             }
 
             /* Pagination */
             //Pageable<Menus> pageable = new Pageable<Menus>(Query, Page - 1, Size);
 
-            Pageable<Menus> pageable = new Pageable<Menus>(Query, Page - 1, Size);
+            Pageable<Menus> pageable = new Pageable<Menus>(result, Page - 1, Size);
             List<Menus> Data = pageable.Data.ToList<Menus>();
 
             int TotalData = pageable.TotalCount;

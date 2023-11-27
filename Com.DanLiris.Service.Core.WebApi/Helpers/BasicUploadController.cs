@@ -45,11 +45,17 @@ namespace Com.Danliris.Service.Core.WebApi.Helpers
                         Reader.BaseStream.Seek(0, SeekOrigin.Begin);
                         Reader.BaseStream.Position = 0;
 
-                        CsvReader Csv = new CsvReader(Reader, CultureInfo.InvariantCulture);
-                        //Csv.Configuration.IgnoreQuotes = false;
-                        //Csv.Configuration.Delimiter = ",";
-                        //Csv.Configuration.RegisterClassMap<TModelMap>();
-                        //Csv.Configuration.HeaderValidated = null;
+                        var csvReaderConfiguration = new CsvHelper.Configuration.CsvConfiguration(cultureInfo: CultureInfo.InvariantCulture)
+                        {
+                            MissingFieldFound = null,
+                            Delimiter = ",",
+                            HeaderValidated = null, 
+                        };
+
+                        CsvReader Csv = new CsvReader(Reader, csvReaderConfiguration);
+                        Csv.Read();
+                        Csv.ReadHeader();
+                        Csv.Context.RegisterClassMap<TModelMap>();
 
                         List<TViewModel> Data = Csv.GetRecords<TViewModel>().ToList();
 

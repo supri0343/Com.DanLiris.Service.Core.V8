@@ -11,10 +11,10 @@ namespace Com.DanLiris.Service.Core.Lib.Models
     public class TrackModel :StandardEntity, IValidatableObject
     {
         [StringLength(255)]
-        public string Type { get; set; }
+         public string? Type { get; set; }
         [StringLength(255)]
-        public string Name { get; set; }
-        public string Box { get; set; }
+         public string? Name { get; set; }
+         public string? Box { get; set; }
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         {
             List<ValidationResult> validationResult = new List<ValidationResult>();

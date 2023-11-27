@@ -57,7 +57,8 @@ namespace Com.DanLiris.Service.Core.Lib.Services
                     Id = b.Id,
                     Code = b.Code,
                     Name = b.Name,
-                    COACode = b.COACode
+                    COACode = b.COACode,
+                    _LastModifiedUtc = b._LastModifiedUtc
                 });
 
             /* Order */

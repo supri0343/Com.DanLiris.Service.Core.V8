@@ -11,20 +11,20 @@ namespace Com.DanLiris.Service.Core.Lib.Models
     public class GarmentCategory : StandardEntity, IValidatableObject
     {
         [MaxLength(255)]
-        public string UId { get; set; }
+         public string? UId { get; set; }
 
         [StringLength(100)]
-        public string Code { get; set; }
+         public string? Code { get; set; }
 
         [MaxLength(255)]
-        public string Name { get; set; }
+         public string? Name { get; set; }
         [MaxLength(255)]
-        public string CodeRequirement { get; set; }
+         public string? CodeRequirement { get; set; }
         [MaxLength(255)]
-        public string CategoryType { get; set; }
+         public string? CategoryType { get; set; }
         public int? UomId { get; set; }
         [MaxLength(255)]
-        public string UomUnit { get; set; }
+         public string? UomUnit { get; set; }
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         {
             List<ValidationResult> validationResult = new List<ValidationResult>();

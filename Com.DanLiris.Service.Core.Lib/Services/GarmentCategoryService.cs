@@ -54,7 +54,8 @@ namespace Com.DanLiris.Service.Core.Lib.Services
                     UomId = a.UomId,
                     UomUnit = a.UomUnit,
                     CodeRequirement = a.CodeRequirement,
-                    CategoryType = a.CategoryType
+                    CategoryType = a.CategoryType,
+                    _LastModifiedUtc = a._LastModifiedUtc
                 });
 
             /* Order */

@@ -31,10 +31,10 @@ namespace Com.DanLiris.Service.Core.Lib.Models
 
         }
         [StringLength(100)]
-        public string Code { get; set; }
+         public string? Code { get; set; }
 
         [StringLength(255)]
-        public string Name { get; set; }
+         public string? Name { get; set; }
 
         public decimal PriceOrigin { get; set; }
         public decimal Price { get; set; }
@@ -42,17 +42,17 @@ namespace Com.DanLiris.Service.Core.Lib.Models
         public int? CurrencyId { get; set; }
 
         [StringLength(255)]
-        public string CurrencyCode { get; set; }
+         public string? CurrencyCode { get; set; }
         [StringLength(255)]
-        public string CurrencySymbol { get; set; }
+         public string? CurrencySymbol { get; set; }
 
         [StringLength(1000)]
-        public string EditReason { get; set; }
+         public string? EditReason { get; set; }
 
         public int? UomId { get; set; }
 
         [StringLength(500)]
-        public string UomUnit { get; set; }
+         public string? UomUnit { get; set; }
 
         public int ProductId { get; set; }
         public DateTime DateBefore { get; set; }

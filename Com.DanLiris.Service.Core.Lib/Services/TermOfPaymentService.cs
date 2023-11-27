@@ -48,7 +48,8 @@ namespace Com.DanLiris.Service.Core.Lib.Services
                     Id = t.Id,
                     Code = t.Code,
                     Name = t.Name,
-                    IsExport = t.IsExport
+                    IsExport = t.IsExport,
+                    _LastModifiedUtc = t._LastModifiedUtc
                 });
 
             /* Order */

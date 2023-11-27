@@ -9,10 +9,10 @@ namespace Com.DanLiris.Service.Core.Lib.Models
     public class BudgetingCategory : StandardEntity, IValidatableObject
     {
         [StringLength(100)]
-        public string Code { get; set; }
+         public string? Code { get; set; }
 
         [StringLength(500)]
-        public string Name { get; set; }
+         public string? Name { get; set; }
 
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         {

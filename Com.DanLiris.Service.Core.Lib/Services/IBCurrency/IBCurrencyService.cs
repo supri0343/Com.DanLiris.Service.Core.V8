@@ -141,7 +141,7 @@ namespace Com.DanLiris.Service.Core.Lib.Services.IBCurrency
             return _dbContext.SaveChanges();
         }
 
-        public string GenerateCSVTemplate()
+         public string? GenerateCSVTemplate()
         {
             var builder = new StringBuilder();
             builder.AppendLine("Mata Uang,Tahun,Bulan,Rate");

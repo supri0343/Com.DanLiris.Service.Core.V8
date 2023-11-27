@@ -9,20 +9,20 @@ namespace Com.DanLiris.Service.Core.Lib.Models
     public class AccountingUnit : StandardEntity, IValidatableObject
     {
         [StringLength(100)]
-        public string Code { get; set; }
+         public string? Code { get; set; }
 
         public int DivisionId { get; set; }
 
         [StringLength(100)]
-        public string DivisionCode { get; set; }
+         public string? DivisionCode { get; set; }
 
         [StringLength(500)]
-        public string DivisionName { get; set; }
+         public string? DivisionName { get; set; }
 
         [StringLength(500)]
-        public string Name { get; set; }
+         public string? Name { get; set; }
 
-        public string Description { get; set; }
+         public string? Description { get; set; }
         public int BudgetCashflowLayoutOrder { get; set; }
 
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)

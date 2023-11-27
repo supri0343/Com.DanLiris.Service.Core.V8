@@ -8,9 +8,9 @@ namespace Com.DanLiris.Service.Core.Lib.ViewModels
 {
     public class GarmentMarketingViewModel : BasicViewModel, IValidatableObject
     {
-        public string Name { get; set; }
+         public string? Name { get; set; }
 
-        public string ResponsibleName { get; set; }
+         public string? ResponsibleName { get; set; }
 
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         {

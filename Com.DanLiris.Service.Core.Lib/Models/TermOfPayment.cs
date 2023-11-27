@@ -10,13 +10,13 @@ namespace Com.DanLiris.Service.Core.Lib.Models
     public class TermOfPayment : StandardEntity, IValidatableObject
     {
         [MaxLength(255)]
-        public string UId { get; set; }
+         public string? UId { get; set; }
 
         [StringLength(100)]
-        public string Code { get; set; }
+         public string? Code { get; set; }
 
         [StringLength(1000)]
-        public string Name { get; set; }
+         public string? Name { get; set; }
 
         public bool IsExport { get; set; }     
 

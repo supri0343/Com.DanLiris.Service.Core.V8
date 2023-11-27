@@ -8,23 +8,23 @@ namespace Com.DanLiris.Service.Core.Lib.ViewModels
 {
     public class GarmentInsuranceViewModel : BasicViewModel, IValidatableObject
     {
-        public string Code { get; set; }
+         public string? Code { get; set; }
 
-        public string Name { get; set; }
+         public string? Name { get; set; }
 
-        public string Address { get; set; }
+         public string? Address { get; set; }
 
-        public string Attention { get; set; }
+         public string? Attention { get; set; }
 
-        public string PhoneNumber { get; set; }
+         public string? PhoneNumber { get; set; }
 
-        public string BankName { get; set; }
+         public string? BankName { get; set; }
 
-        public string AccountNumber { get; set; }
+         public string? AccountNumber { get; set; }
 
-        public string SwiftCode { get; set; }
+         public string? SwiftCode { get; set; }
 
-        public string NPWP { get; set; }
+         public string? NPWP { get; set; }
 
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         {

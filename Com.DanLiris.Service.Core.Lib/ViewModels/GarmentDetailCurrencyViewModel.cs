@@ -6,8 +6,8 @@ namespace Com.DanLiris.Service.Core.Lib.ViewModels
     public class GarmentDetailCurrencyViewModel : BasicViewModel
     {
 
-        public string code { get; set; }
-        public string Code { get; set; }
+         public string? code { get; set; }
+         public string? Code { get; set; }
 
         public DateTime date { get; set; }
         public DateTime Date { get; set; }

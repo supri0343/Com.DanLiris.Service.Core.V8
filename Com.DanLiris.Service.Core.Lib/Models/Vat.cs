@@ -10,13 +10,13 @@ namespace Com.DanLiris.Service.Core.Lib.Models
     public class Vat : StandardEntity, IValidatableObject
     {
         [StringLength(500)]
-        public string Name { get; set; }
+         public string? Name { get; set; }
 
         public double? Rate { get; set; }
 
-        public string Description { get; set; }
+         public string? Description { get; set; }
 
-        public string COACodeCredit { get; set; }
+         public string? COACodeCredit { get; set; }
 
         public DateTimeOffset? Date { get; set; }
 

@@ -10,10 +10,10 @@ namespace Com.DanLiris.Service.Core.Lib.Models
     {
         
         [MaxLength(255)]
-        public string UId { get; set; }
+         public string? UId { get; set; }
 
         [StringLength(500)]
-        public string Unit { get; set; }
+         public string? Unit { get; set; }
 
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         {

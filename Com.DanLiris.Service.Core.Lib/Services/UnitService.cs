@@ -61,7 +61,8 @@ namespace Com.DanLiris.Service.Core.Lib.Services
                     DivisionName = u.DivisionName,
                     Name = u.Name,
                     COACode = u.COACode,
-                    AccountingUnitId = u.AccountingUnitId
+                    AccountingUnitId = u.AccountingUnitId,
+                    _LastModifiedUtc = u._LastModifiedUtc
                 }).Where(x => x.Id != 37);
 
             /* Order */

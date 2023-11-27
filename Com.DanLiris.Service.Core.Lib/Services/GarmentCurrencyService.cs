@@ -51,7 +51,8 @@ namespace Com.DanLiris.Service.Core.Lib.Services
                     Id = g.Id,
                     Code = g.Code,
                     Rate = g.Rate,
-                    Date = g.Date
+                    Date = g.Date,
+                    _LastModifiedUtc = g._LastModifiedUtc
                 });
 
             /* Order */

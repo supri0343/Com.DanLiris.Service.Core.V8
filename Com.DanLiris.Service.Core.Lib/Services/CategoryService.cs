@@ -59,10 +59,12 @@ namespace Com.DanLiris.Service.Core.Lib.Services
                     StockCOA = b.StockCOA,
                     LocalDebtCOA = b.LocalDebtCOA,
                     ImportDebtCOA = b.ImportDebtCOA,
-                    AccountingCategoryId = b.AccountingCategoryId
+                    AccountingCategoryId = b.AccountingCategoryId,
+                    _LastModifiedUtc = b._LastModifiedUtc
                 });
 
             /* Order */
+
             if (OrderDictionary.Count.Equals(0))
             {
                 OrderDictionary.Add("_updatedDate", General.DESCENDING);

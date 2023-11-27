@@ -13,6 +13,7 @@ using CsvHelper.Configuration;
 using System.Dynamic;
 using Com.DanLiris.Service.Core.Lib.Interfaces;
 using Microsoft.Extensions.Primitives;
+using Com.DanLiris.Service.Core.Lib.Services.IBCurrency;
 
 namespace Com.DanLiris.Service.Core.Lib.Services
 {
@@ -56,12 +57,13 @@ namespace Com.DanLiris.Service.Core.Lib.Services
                     Name = b.Name
                 });
 
+            List<Budget> result = new List<Budget>();
             /* Order */
             if (OrderDictionary.Count.Equals(0))
             {
                 OrderDictionary.Add("_updatedDate", General.DESCENDING);
 
-                Query = Query.OrderByDescending(b => b._LastModifiedUtc); /* Default Order */
+                result = Query.ToList().OrderByDescending(b => b._LastModifiedUtc).ToList(); /* Default Order */
             }
             else
             {
@@ -71,13 +73,13 @@ namespace Com.DanLiris.Service.Core.Lib.Services
 
                 BindingFlags IgnoreCase = BindingFlags.IgnoreCase | BindingFlags.Public | BindingFlags.Instance;
 
-                Query = OrderType.Equals(General.ASCENDING) ?
-                    Query.OrderBy(b => b.GetType().GetProperty(TransformKey, IgnoreCase).GetValue(b)) :
-                    Query.OrderByDescending(b => b.GetType().GetProperty(TransformKey, IgnoreCase).GetValue(b));
+                result = OrderType.Equals(General.ASCENDING) ?
+                    Query.ToList().OrderBy(b => b.GetType().GetProperty(TransformKey, IgnoreCase).GetValue(b)).ToList() :
+                    Query.ToList().OrderByDescending(b => b.GetType().GetProperty(TransformKey, IgnoreCase).GetValue(b)).ToList();
             }
 
             /* Pagination */
-            Pageable<Budget> pageable = new Pageable<Budget>(Query, Page - 1, Size);
+            Pageable<Budget> pageable = new Pageable<Budget>(result, Page - 1, Size);
             List<Budget> Data = pageable.Data.ToList<Budget>();
 
             int TotalData = pageable.TotalCount;

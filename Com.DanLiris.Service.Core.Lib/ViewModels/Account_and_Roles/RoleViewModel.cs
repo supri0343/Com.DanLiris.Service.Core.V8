@@ -8,9 +8,9 @@ namespace Com.DanLiris.Service.Core.Lib.ViewModels.Account_and_Roles
 {
     public class RoleViewModel : BasicViewModel, IValidatableObject
     {
-        public string Code { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
+         public string? Code { get; set; }
+         public string? Name { get; set; }
+         public string? Description { get; set; }
         public ICollection<PermissionViewModel> Permissions { get; set; }
 
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)

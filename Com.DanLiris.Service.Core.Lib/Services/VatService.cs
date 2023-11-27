@@ -52,7 +52,8 @@ namespace Com.DanLiris.Service.Core.Lib.Services
                     Name = b.Name,
                     Rate = b.Rate,
                     COACodeCredit = b.COACodeCredit,
-                    Date = b.Date
+                    Date = b.Date,
+                    _LastModifiedUtc = b._LastModifiedUtc
                 });
 
             /* Order */

@@ -50,7 +50,8 @@ namespace Com.DanLiris.Service.Core.Lib.Services
                     Name = h.Name,
                     DivisionId = h.DivisionId,
                     DivisionName = h.DivisionName,
-                    Description = h.Description
+                    Description = h.Description,
+                    _LastModifiedUtc = h._LastModifiedUtc
                 });
 
             /* Order */

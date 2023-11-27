@@ -13,10 +13,10 @@ namespace Com.DanLiris.Service.Core.Lib.Models
     public class YarnMaterial : StandardEntity, IValidatableObject
     {
         [MaxLength(255)]
-        public string UId { get; set; }
-        public string Code { get; set; }
-        public string Name { get; set; }
-        public string Remark { get; set; }
+         public string? UId { get; set; }
+         public string? Code { get; set; }
+         public string? Name { get; set; }
+         public string? Remark { get; set; }
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         {
             YarnMaterialService service = validationContext.GetService<YarnMaterialService>();

@@ -11,19 +11,19 @@ namespace Com.DanLiris.Service.Core.Lib.Models
     public class ProcessType : StandardEntity, IValidatableObject
     {
         [MaxLength(255)]
-        public string UId { get; set; }
-        public string Code { get; set; }
-        public string Name { get; set; }
-        public string Remark { get; set; }
-        public string Unit { get; set; }
+         public string? UId { get; set; }
+         public string? Code { get; set; }
+         public string? Name { get; set; }
+         public string? Remark { get; set; }
+         public string? Unit { get; set; }
         
-        public string SPPCode { get; set; }
+         public string? SPPCode { get; set; }
 
         /*order type*/
         public int OrderTypeId { get; set; }
-        public string OrderTypeCode { get; set; }
-        public string OrderTypeName { get; set; }
-        public string OrderTypeRemark { get; set; }
+         public string? OrderTypeCode { get; set; }
+         public string? OrderTypeName { get; set; }
+         public string? OrderTypeRemark { get; set; }
 
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         {

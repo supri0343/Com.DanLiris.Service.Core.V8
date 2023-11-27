@@ -8,18 +8,18 @@ namespace Com.DanLiris.Service.Core.Lib.ViewModels
 {
     public class GarmentLeftoverWarehouseProductViewModel : BasicViewModel, IValidatableObject
     {
-        public string Code { get; set; }
+         public string? Code { get; set; }
 
-        public string Name { get; set; }
+         public string? Name { get; set; }
 
         public int? UomId { get; set; }
 
-        public string UomUnit { get; set; }
+         public string? UomUnit { get; set; }
         public int? ProductTypeId { get; set; }
 
-        public string ProductTypeCode { get; set; }
+         public string? ProductTypeCode { get; set; }
 
-        public string ProductTypeName { get; set; }
+         public string? ProductTypeName { get; set; }
 
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         {

@@ -6,11 +6,11 @@ namespace Com.DanLiris.Service.Core.Lib.ViewModels
     public class StorageViewModel : BasicViewModelOld
     {
 
-        public string code { get; set; }
+         public string? code { get; set; }
 
-        public string name { get; set; }
+         public string? name { get; set; }
 
-        public string description { get; set; }
+         public string? description { get; set; }
 
         public StorageUnitViewModel unit { get; set; }
     }
@@ -19,7 +19,7 @@ namespace Com.DanLiris.Service.Core.Lib.ViewModels
     {
         public int? _id { get; set; }
 
-        public string name { get; set; }
+         public string? name { get; set; }
 
         public DivisionViewModel division { get; set; }
     }

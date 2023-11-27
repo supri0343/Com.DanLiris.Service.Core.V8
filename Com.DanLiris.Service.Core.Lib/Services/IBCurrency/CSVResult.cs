@@ -18,7 +18,7 @@ namespace Com.DanLiris.Service.Core.Lib.Services.IBCurrency
             IsAnyValidationError = true;
         }
 
-        public string GetDataStringWithErrorMessage()
+         public string? GetDataStringWithErrorMessage()
         {
             var builder = new StringBuilder();
 

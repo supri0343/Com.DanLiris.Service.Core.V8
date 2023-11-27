@@ -12,25 +12,25 @@ namespace Com.DanLiris.Service.Core.Lib.Models
     public class Unit : StandardEntity, IValidatableObject
     {
         [MaxLength(255)]
-        public string UId { get; set; }
+         public string? UId { get; set; }
 
         [StringLength(100)]
-        public string Code { get; set; }
+         public string? Code { get; set; }
 
         public int DivisionId { get; set; }
 
         [StringLength(100)]
-        public string DivisionCode { get; set; }
+         public string? DivisionCode { get; set; }
 
         [StringLength(500)]
-        public string DivisionName { get; set; }
+         public string? DivisionName { get; set; }
 
         [StringLength(500)]
-        public string Name { get; set; }
+         public string? Name { get; set; }
 
-        public string Description { get; set; }
+         public string? Description { get; set; }
         [MaxLength(50)]
-        public string COACode { get; set; }
+         public string? COACode { get; set; }
         public int VBDocumentLayoutOrder { get; set; }
         public int AccountingUnitId { get; set; }
 

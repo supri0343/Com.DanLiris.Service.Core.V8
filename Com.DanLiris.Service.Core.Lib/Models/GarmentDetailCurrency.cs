@@ -12,7 +12,7 @@ namespace Com.DanLiris.Service.Core.Lib.Models
     {
      
         [StringLength(100)]
-        public string Code { get; set; }
+         public string? Code { get; set; }
 
 		public DateTime Date { get; set; }
 
